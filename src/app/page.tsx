@@ -9,7 +9,7 @@ export default function Home() {
       <header className="h-96 bg-bgHeader bg-cover">
         <div className="h-full bg-black/30"></div>
       </header>
-      <main className="">
+      <main>
         <section className="py-24 px-8 md:px-20">
           <div className="flex flex-col md:flex-row justify-between gap-14 md:gap-36">
             <CardSection title="Custo beneficio" paragraph="Economize com a gente">
@@ -24,13 +24,6 @@ export default function Home() {
           </div>
         </section>
         <section className="bg-yellow-200/40 w-full flex justify-center py-10">
-          {/* <div className="overflow-hidden w-4/6 flex">
-            <div className="h-full">
-              <Image src={'/assets/aspas.png'} alt="quote_mark" width={50} height={50} />
-              <p className="text-slate-800/70">&ldquo; Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde aliquam earum illum praesentium commodi! Totam autem delectus iste assumenda sit nemo, deleniti aliquam ab ratione! Deserunt doloribus optio dolores cumque. &rdquo;</p>
-              <Image src={'/assets/commentsPic.jpg'} alt="CommentPic" width={60} height={60} className="h-[60px] rounded-full m-auto my-4" />
-            </div>
-          </div> */}
           <Carousel />
         </section>
       </main>
