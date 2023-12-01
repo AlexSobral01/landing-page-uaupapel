@@ -12,10 +12,10 @@ export default function ToggleMenu() {
 
   return (
     <>
-      <button className="z-10 md:hidden" onClick={() => setShowToggle(!showToggle)}>
+      <button className="z-30 md:hidden" onClick={() => setShowToggle(!showToggle)}>
         <MobileMenu />
       </button>
-      <div className={showToggle? "bg-slate-900 md:hidden flex flex-col py-5 absolute top-0 right-0 duration-500": "aboslute hidden"}>
+      <div className={showToggle? "bg-slate-900 md:hidden flex flex-col py-5 px-16 absolute top-0 right-0 duration-500 z-20": "aboslute hidden"}>
         <ul className="flex md:hidden flex-col gap-8 px-16 pt-20 h-screen">
           <li><Link href={'/'} className="text-white hover:text-slate-300 border border-black border-b-white duration-300">Home</Link></li>
           <li><Link href={'/'} className="text-white hover:text-slate-300 border border-black border-b-white duration-300">Serviços</Link></li>

@@ -41,14 +41,18 @@ export default function Carousel() {
           {comments.map((comment, index) => (
             <div key={index} className={styles.slide}>
               <Image src={'/assets/aspas.png'} alt="quote_mark" width={50} height={50} />
-              <p className="text-slate-800/70">&ldquo; {comment.description} &rdquo;</p>
+              <p className="text-slate-800/70 m-auto">&ldquo; {comment.description} &rdquo;</p>
               <Image src={'/assets/commentsPic.jpg'} alt="CommentPic" width={60} height={60} className="h-[60px] rounded-full m-auto my-4" />
               <h5>{comment.name}</h5>
             </div>
           ))}
         </div>
-        <button className={styles.prevBtn} onClick={handlePrevSlide}><FaArrowLeft size={20} /></button>
-        <button className={styles.nextBtn} onClick={handleNextSlide}><FaArrowRight size={20} /></button>
+        { currentSlide > 0 && (
+          <button className={styles.prevBtn} onClick={handlePrevSlide}><FaArrowLeft color="gray" size={20} /></button>
+        )}
+        { currentSlide < 2 && (
+          <button className={styles.nextBtn} onClick={handleNextSlide}><FaArrowRight color="gray" size={20} /></button>
+        )}
       </div>
     </div>
   )
